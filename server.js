@@ -10,6 +10,8 @@ var io = socket_io(server);
 var tally = 0;
 
 
+var users = {};
+
 /*		socket.io		*/
 io.on('connection', function (socket) {
     console.log('Client connected');
@@ -36,4 +38,3 @@ io.on('connection', function (socket) {
 
 
 server.listen(process.env.PORT || 8080);
-// app.listen(process.env.PORT || 8080);
